@@ -1,0 +1,19 @@
+{
+  "name": "hallbooking",
+  "version": "1.0.0",
+  "description": "node js hall booking task",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "lokki",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "date-fns": "^3.6.0",
+    "express": "^4.19.1",
+    "nodemon": "^3.1.0"
+  }
+}
