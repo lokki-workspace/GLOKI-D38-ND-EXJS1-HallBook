@@ -12,6 +12,38 @@ app.listen(PORT, () => {
 });
 
 
+
+
+// Rough Front End Model
+app.get("/", (req, res) => {
+    res.send(`
+    
+    <h1 style="background-color:black; color:yellow; text-align: center; height:50px; padding-top:10px; font-size:30px;">
+        Welcome to LOKKI STAR HOTEL
+    </h1>
+    <h2 style="color:red; display:flex; justify-content:center;">
+    NodeJS and ExpressJS Backend Hall Booking is Started
+    </h2>
+    <h4 style="color:red; display:flex; justify-content:center;">
+    API's Started..! You can also Access in Postman to test
+    </h4>
+    <h3 style="color:black; display:flex; justify-content:center;">
+    Here Some Link For examples
+    </h3>
+      <div style="display:flex; justify-content:center;padding:10px;"> 
+      <div style=" background-color:white; padding:20px;"> 
+      <p style="color:white;background-color:black; padding:10px 40px; margin:10px 20px; text-align:center ">
+        <a href="/rooms/booked" style="text-decoration:none;color:white;">Rooms Booked</a>
+      </p>
+      <p style="color:white;background-color:black; padding:10px 5px; margin:10px 20px; text-align:center ">
+      <a href="/customers/booked"  style="text-decoration:none;color:white;">Customers Booked</a></p>
+      <p style="color:white;background-color:black; padding:10px 5px; margin:10px 20px; text-align:center ">
+      <a href="/customer-detail/lokesh"  style="text-decoration:none;color:white;">Customers History</a></p>
+      </div>
+      `)
+})
+
+
 // 1. Create a Room
 app.post('/createRoom', (req, res) => {
     const { roomName, seatsAvailable, amenities, price_per_hr } = req.body;
